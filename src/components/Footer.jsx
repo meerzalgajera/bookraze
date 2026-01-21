@@ -116,7 +116,7 @@ function Footer() {
         >
           <Col xs={12} md={8} className="text-center text-md-start mb-2 mb-md-0">
             <small>
-              © 2026, Bookraze - Book Store (Password: demo) Powered by Shopify
+              © 2026, Bookraze - Book Store 
             </small>
           </Col>
           <Col xs={12} md={4} className="text-center text-md-end">
