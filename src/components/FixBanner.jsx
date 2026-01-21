@@ -2,7 +2,7 @@
 import React from "react";
 import './FixBanner.css';
 import Button from "react-bootstrap/Button";
-import fix from '../assets/fixbanner.webp';
+// import fix from '../assets/fixbanner.webp';
 
 const FixBanner = () => {
   return (
