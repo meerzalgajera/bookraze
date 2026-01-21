@@ -1,0 +1,142 @@
+/* ================= HERO SLIDER WRAPPER ================= */
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================= IMAGE ================= */
+.hero-slider .hero-img {
+  height: 80vh;
+  object-fit: cover;
+}
+
+/* ================= CAPTION ================= */
+.hero-slider .hero-caption {
+  bottom: 20%;
+  right: 8%;
+  left: auto;
+  text-align: left;
+  color: #000;
+  max-width: 460px;
+}
+
+/* ================= TEXT ================= */
+.hero-slider .hero-price {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.hero-slider .hero-title {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.hero-slider .hero-author {
+  font-size: 16px;
+}
+
+/* ================= BUTTON ================= */
+.hero-slider .hero-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hero-slider .hero-btn:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* ================= HERO ARROWS ================= */
+
+/* Hide arrows by default */
+.hero-slider .carousel-control-prev,
+.hero-slider .carousel-control-next {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show arrows on hover */
+.hero-slider:hover .carousel-control-prev,
+.hero-slider:hover .carousel-control-next {
+  opacity: 1;
+}
+
+/* Arrow icon circle */
+.hero-slider .carousel-control-prev-icon,
+.hero-slider .carousel-control-next-icon {
+  background-color: #ffc107; /* yellow */
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background-size: 55%;
+  transition: all 0.3s ease;
+}
+
+/* Hover → black */
+.hero-slider .carousel-control-prev:hover .carousel-control-prev-icon,
+.hero-slider .carousel-control-next:hover .carousel-control-next-icon {
+  background-color: #000;
+}
+
+/* Arrow position */
+.hero-slider .carousel-control-prev {
+  left: 20px;
+}
+
+.hero-slider .carousel-control-next {
+  right: 20px;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 991px) {
+  .hero-slider .hero-img {
+    height: 65vh;
+  }
+
+  .hero-slider .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-slider .hero-caption {
+    right: 5%;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+  .hero-slider .hero-img {
+    height: auto;
+  }
+
+  .hero-slider .hero-caption {
+    position: static;
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-slider .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-slider .hero-price {
+    font-size: 14px;
+  }
+
+  .hero-slider .hero-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  /* Hide arrows on mobile */
+  .hero-slider .carousel-control-prev,
+  .hero-slider .carousel-control-next {
+    display: none;
+  }
+}

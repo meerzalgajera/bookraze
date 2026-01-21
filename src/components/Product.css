@@ -1,0 +1,112 @@
+/* ================= SECTION ================= */
+.product-section {
+  margin: 50px 0;
+}
+
+/* ================= SLIDER ================= */
+.product-slider {
+  position: relative;
+}
+
+/* ================= CARD ================= */
+.product-card {
+  padding: 15px;
+  text-align: center;
+}
+
+/* ================= IMAGE ================= */
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ================= HOVER ICONS ================= */
+.hover-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 12px;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.hover-icons span {
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hover-icons span:hover {
+  background: #ffc107;
+}
+
+.product-card:hover .hover-icons {
+  opacity: 1;
+}
+
+/* ================= TEXT ================= */
+.product-card h6 {
+  margin: 15px 0 5px;
+  font-size: 15px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+/* ================= ARROWS (ONLY PRODUCT) ================= */
+.product-slider .slick-prev,
+.product-slider .slick-next {
+  width: 45px;
+  height: 45px;
+  background: #ffc107;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.product-slider .slick-prev:before,
+.product-slider .slick-next:before {
+  color: #000;
+  font-size: 20px;
+}
+
+.product-slider .slick-prev:hover,
+.product-slider .slick-next:hover {
+  background: #000;
+}
+
+.product-slider .slick-prev:hover:before,
+.product-slider .slick-next:hover:before {
+  color: #fff;
+}
+
+/* ================= HIDE ARROWS ON SM ================= */
+@media (max-width: 768px) {
+  .product-slider .slick-prev,
+  .product-slider .slick-next {
+    display: none !important;
+  }
+}
+/* ================= RATING ================= */
+.rating {
+  color: #ffc107;      /* yellow stars */
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.rating svg {
+  margin-right: 2px;
+}

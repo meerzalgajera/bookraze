@@ -1,0 +1,242 @@
+/* ================= GLOBAL ================= */
+body {
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #fff;
+}
+
+/* ================= TOP BAR ================= */
+.topbar {
+  width: 100%;
+  background: #000; /* BLACK */
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+body.dark-mode .topbar {
+  background: #000;
+  color: #fff;
+}
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+body.dark-mode .header {
+  background: #111;
+}
+
+/* ================= LOGO ================= */
+.logo img {
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode logo bigger + white */
+body.dark-mode .logo img {
+  height: 52px; /* moto */
+  filter: brightness(0) invert(1); /* white */
+}
+
+/* ================= MENU ================= */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode menu white */
+body.dark-mode .nav a {
+  color: #fff;
+}
+
+/* Menu hover YELLOW */
+.nav a:hover,
+body.dark-mode .nav a:hover {
+  color: #ffcc00;
+}
+
+/* ================= ICONS ================= */
+.icons {
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+  color: #000;
+}
+
+body.dark-mode .icons {
+  color: #fff;
+}
+
+/* ================= DARK SWITCH ================= */
+.dark-mode-switch svg {
+  font-size: 26px;
+  color: #ffcc00; /* yellow */
+  cursor: pointer;
+}
+
+/* ================= TOGGLE ================= */
+.mobile-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+}
+
+body.dark-mode .mobile-toggle {
+  color: #fff;
+}
+
+/* Close */
+.close-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+}
+
+body.dark-mode .close-menu {
+  color: #fff;
+}
+
+/* ================================================= */
+/* ================= DESKTOP ≥ 1201px =============== */
+/* ================================================= */
+@media (min-width: 1201px) {
+  .mobile-toggle,
+  .close-menu {
+    display: none !important;
+  }
+
+  .icons {
+    display: flex;
+  }
+
+  .nav {
+    position: static;
+    flex-direction: row;
+  }
+}
+
+/* ================================================= */
+/* ============= 1200px – 1050px ==================== */
+/* ================================================= */
+@media (min-width: 1050px) and (max-width: 1200px) {
+  .mobile-toggle {
+    display: block;
+    order: 1; /* LEFT */
+  }
+
+  .logo {
+    order: 2;
+    margin-left: auto; /* RIGHT */
+  }
+
+  .icons {
+    display: none !important;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 80px 20px;
+    gap: 20px;
+    transition: left 0.3s ease;
+    z-index: 9999;
+  }
+
+  body.dark-mode .nav {
+    background: #111;
+  }
+
+  .nav.open {
+    left: 0;
+  }
+
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+/* ================================================= */
+/* ================= ≤ 1049px ======================= */
+/* ================================================= */
+@media (max-width: 1049px) {
+  .mobile-toggle {
+    display: block;
+    order: 1; /* LEFT */
+  }
+
+  .logo {
+    order: 2;
+    margin-left: auto; /* RIGHT */
+  }
+
+  .icons {
+    display: none !important;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 80px 20px;
+    gap: 20px;
+    transition: left 0.3s ease;
+    z-index: 9999;
+  }
+
+  body.dark-mode .nav {
+    background: #111;
+  }
+
+  .nav.open {
+    left: 0;
+  }
+
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 9998;
+  }
+}
